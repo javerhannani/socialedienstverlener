@@ -2,8 +2,20 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <header className="relative overflow-hidden pt-[60px] pb-10">
+    <header className="relative overflow-hidden pt-[40px] pb-10">
       <div className="max-w-[1200px] mx-auto px-8 max-720:px-5">
+        {/* Brand row — full logo prominently above the hero grid */}
+        <div className="flex justify-end mb-10 max-920:justify-center max-920:mb-8">
+          <Image
+            src="/logo-full.png"
+            alt="De Sociale Dienstverlener — Freelancer, voor de jeugd."
+            width={3125}
+            height={1806}
+            priority
+            className="h-28 w-auto max-720:h-20"
+          />
+        </div>
+
         <div className="grid grid-cols-[1.15fr_.85fr] gap-[60px] items-center max-920:grid-cols-1 max-920:gap-8">
           {/* Left column */}
           <div>
@@ -73,20 +85,7 @@ export default function Hero() {
           </div>
 
           {/* Right column: hero stack */}
-          <div className="relative flex flex-col">
-            {/* Logo above the card stack */}
-            <div className="flex justify-end mb-5 max-920:justify-center">
-              <Image
-                src="/logo-full.png"
-                alt="De Sociale Dienstverlener — Freelancer, voor de jeugd."
-                width={3125}
-                height={1806}
-                priority
-                className="h-16 w-auto max-720:h-14"
-              />
-            </div>
-
-            <div className="relative h-[560px] max-920:h-[520px] max-520:h-[480px]">
+          <div className="relative h-[560px] max-920:h-[520px] max-520:h-[480px]">
             {/* c1 dark photo card */}
             <div
               className="absolute top-0 left-0 right-[50px] bottom-[140px] bg-ink text-cream p-[26px] rounded-[28px] flex flex-col gap-[18px] overflow-hidden max-520:right-6 max-520:bottom-[160px] max-520:p-5"
@@ -146,7 +145,6 @@ export default function Hero() {
                   </div>
                 </div>
               ))}
-            </div>
             </div>
           </div>
         </div>
