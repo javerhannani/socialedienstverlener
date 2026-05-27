@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const links = [
   { href: "#diensten", label: "Diensten" },
@@ -12,11 +12,42 @@ const links = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastY = useRef(0);
+  const ticking = useRef(false);
 
   const closeMenu = () => setOpen(false);
 
+  useEffect(() => {
+    lastY.current = window.scrollY;
+    const onScroll = () => {
+      if (ticking.current) return;
+      ticking.current = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        const delta = y - lastY.current;
+        if (y < 80) {
+          setHidden(false);
+        } else if (delta > 6) {
+          setHidden(true);
+          setOpen(false);
+        } else if (delta < -6) {
+          setHidden(false);
+        }
+        lastY.current = y;
+        ticking.current = false;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav className="sticky top-0 z-50 max-820:static">
+    <nav
+      className={`sticky top-0 z-50 transition-transform duration-300 ease-out ${
+        hidden ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <div className="max-w-[1200px] mx-auto px-8 max-720:px-5">
         <div
           className="my-[18px] max-820:my-3 max-w-[1180px] mx-auto flex items-center justify-between gap-[18px] py-[10px] pl-[22px] pr-[14px] border border-line rounded-pill bg-white shadow-[0_8px_24px_-12px_#1a1c1422]"
