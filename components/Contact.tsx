@@ -85,15 +85,15 @@ export default function Contact() {
                 {...(t.external
                   ? { target: "_blank", rel: "noopener" }
                   : {})}
-                className="flex justify-between items-center bg-cream py-[18px] px-[22px] rounded-[16px] font-medium transition-colors duration-150 hover:bg-olive-faint"
+                className="flex items-center gap-4 bg-cream py-[18px] px-[22px] rounded-[16px] font-medium transition-colors duration-150 hover:bg-olive-faint"
               >
-                <div>
+                <div className="min-w-0 flex-1">
                   <small className="text-[0.76rem] text-ink-2 block mb-[2px] font-normal">
                     {t.label}
                   </small>
-                  {t.value}
+                  <span className="block truncate max-720:text-[0.95rem]">{t.value}</span>
                 </div>
-                <span className="w-9 h-9 rounded-full bg-olive text-white grid place-items-center">
+                <span className="w-9 h-9 rounded-full bg-olive text-white grid place-items-center flex-shrink-0">
                   →
                 </span>
               </a>
