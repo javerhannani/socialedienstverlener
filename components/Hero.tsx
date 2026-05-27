@@ -2,20 +2,8 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <header className="relative overflow-hidden pt-[28px] pb-10">
+    <header className="relative overflow-hidden pt-[12px] pb-10">
       <div className="max-w-[1200px] mx-auto px-8 max-720:px-5">
-        {/* Brand row — full logo at the top-right (desktop only) */}
-        <div className="flex justify-end mb-8 max-820:hidden">
-          <Image
-            src="/logo-full.png"
-            alt="De Sociale Dienstverlener — Freelancer, voor de jeugd."
-            width={3125}
-            height={1806}
-            priority
-            className="h-52 w-auto"
-          />
-        </div>
-
         <div className="grid grid-cols-[1.15fr_.85fr] gap-[60px] items-center max-920:grid-cols-1 max-920:gap-8">
           {/* Left column */}
           <div>
