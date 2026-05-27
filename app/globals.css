@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --olive: #638500;
+  --olive-deep: #3d5300;
+  --olive-soft: #dbe5b4;
+  --olive-faint: #f4f6e6;
+  --cream: #f5efe1;
+  --cream-deep: #ece4d0;
+  --ink: #1a1c14;
+  --ink-2: #4a4d40;
+  --ink-3: #7a7d6f;
+  --line: #1a1c1414;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Highlighter underline effect for hero h1 */
+.headline-underline {
+  background-image: linear-gradient(
+    transparent 68%,
+    var(--olive-soft) 68%,
+    var(--olive-soft) 92%,
+    transparent 92%
+  );
+  background-repeat: no-repeat;
+}
+
+/* Olive italic accent span */
+.headline-accent {
+  color: var(--olive);
+  font-style: italic;
+}
+
+/* Feature card glow */
+.feature-glow::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #93c01f40 0%, transparent 70%);
+  pointer-events: none;
+}
