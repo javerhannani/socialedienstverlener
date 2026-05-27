@@ -22,7 +22,7 @@ export default function Over() {
 
           {/* Portrait */}
           <div
-            className="relative z-10 rounded-[24px] overflow-hidden border border-line"
+            className="relative z-10 rounded-[24px] overflow-hidden"
             style={{ aspectRatio: "4 / 5" }}
           >
             <Image
@@ -30,7 +30,7 @@ export default function Over() {
               alt="Portret van Javer Hannani"
               fill
               sizes="(max-width: 920px) 100vw, 40vw"
-              className="object-cover"
+              className="object-cover portrait-fade"
             />
           </div>
 

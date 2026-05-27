@@ -68,6 +68,20 @@ img {
   font-style: italic;
 }
 
+/* Soft right-edge fade on About portrait so it blends into the card */
+.portrait-fade {
+  -webkit-mask-image: linear-gradient(to right, black 60%, transparent 100%);
+  mask-image: linear-gradient(to right, black 60%, transparent 100%);
+}
+
+@media (max-width: 920px) {
+  /* On mobile the portrait is full-width above the text, so fade the bottom instead */
+  .portrait-fade {
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+}
+
 /* Feature card glow */
 .feature-glow::after {
   content: "";
