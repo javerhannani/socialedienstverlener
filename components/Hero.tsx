@@ -4,35 +4,36 @@ export default function Hero() {
   return (
     <header className="relative overflow-hidden pt-[28px] pb-10">
       <div className="max-w-[1200px] mx-auto px-8 max-720:px-5">
-        {/* Top row — eyebrow left, full logo right, same horizontal line */}
-        <div className="flex items-center justify-between gap-6 mb-10 max-920:flex-col max-920:items-start max-920:gap-5 max-920:mb-8">
-          <div
-            className="inline-flex items-center gap-[10px] py-2 px-4 rounded-pill text-[0.82rem] font-medium flex-shrink-0"
-            style={{
-              background: "var(--olive-faint)",
-              color: "var(--olive-deep)",
-              border: "1px solid #63850020",
-            }}
-          >
-            <span
-              className="w-2 h-2 rounded-full bg-olive"
-              style={{ boxShadow: "0 0 0 4px #63850018" }}
-            />
-            Freelance jeugdhulpverlener · Flexibel inzetbaar
-          </div>
+        {/* Brand row — full logo at the top-right (desktop only) */}
+        <div className="flex justify-end mb-8 max-820:hidden">
           <Image
             src="/logo-full.png"
             alt="De Sociale Dienstverlener — Freelancer, voor de jeugd."
             width={3125}
             height={1806}
             priority
-            className="h-40 w-auto max-920:h-32 max-720:h-28 max-520:h-24"
+            className="h-52 w-auto"
           />
         </div>
 
         <div className="grid grid-cols-[1.15fr_.85fr] gap-[60px] items-center max-920:grid-cols-1 max-920:gap-8">
           {/* Left column */}
           <div>
+            <div
+              className="inline-flex items-center gap-[10px] py-2 px-4 rounded-pill text-[0.82rem] font-medium mb-7"
+              style={{
+                background: "var(--olive-faint)",
+                color: "var(--olive-deep)",
+                border: "1px solid #63850020",
+              }}
+            >
+              <span
+                className="w-2 h-2 rounded-full bg-olive"
+                style={{ boxShadow: "0 0 0 4px #63850018" }}
+              />
+              Freelance jeugdhulpverlener · Flexibel inzetbaar
+            </div>
+
             <h1
               className="font-display font-medium m-0 mb-6"
               style={{
