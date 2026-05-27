@@ -10,7 +10,7 @@ export default function Footer() {
             alt="De Sociale Dienstverlener — Freelancer, voor de jeugd."
             width={3125}
             height={1806}
-            className="h-12 w-auto max-720:h-10"
+            className="h-28 w-auto max-720:h-24"
           />
         </div>
         <div className="flex justify-center gap-[22px] flex-wrap">

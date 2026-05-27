@@ -29,6 +29,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 90px;
+}
+
 body {
   background: var(--cream);
   color: var(--ink);

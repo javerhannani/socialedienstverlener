@@ -19,8 +19,7 @@ export default function Nav() {
     <nav className="sticky top-0 z-50">
       <div className="max-w-[1200px] mx-auto px-8 max-720:px-5">
         <div
-          className="my-[18px] max-820:my-3 max-w-[1180px] mx-auto flex items-center justify-between gap-[18px] py-[10px] pl-[22px] pr-[14px] border border-line rounded-pill"
-          style={{ background: "#ffffffcc", backdropFilter: "blur(10px)" }}
+          className="my-[18px] max-820:my-3 max-w-[1180px] mx-auto flex items-center justify-between gap-[18px] py-[10px] pl-[22px] pr-[14px] border border-line rounded-pill bg-white shadow-[0_8px_24px_-12px_#1a1c1422]"
         >
           <a href="#" aria-label="De Sociale Dienstverlener — naar boven" className="flex items-center shrink-0">
             <Image
@@ -79,10 +78,7 @@ export default function Nav() {
         </div>
 
         {open && (
-          <div
-            className="hidden max-820:block mx-3 -mt-2 mb-2 border border-line rounded-2xl p-3 shadow-[0_22px_50px_-22px_#1a1c1430]"
-            style={{ background: "#ffffffee", backdropFilter: "blur(10px)" }}
-          >
+          <div className="hidden max-820:block mx-3 -mt-2 mb-2 border border-line rounded-2xl p-3 shadow-[0_22px_50px_-22px_#1a1c1430] bg-white">
             <ul className="list-none m-0 p-0 flex flex-col gap-1">
               {links.map((l) => (
                 <li key={l.href}>
