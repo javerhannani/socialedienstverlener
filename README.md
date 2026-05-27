@@ -24,12 +24,16 @@ npm run start
 
 - `app/` — App Router entry (`layout.tsx`, `page.tsx`, `globals.css`).
 - `components/` — Section components (`Nav`, `Hero`, `Diensten`, `Over`, `Werkwijze`, `Opdrachtgevers`, `Contact`, `Footer`, `CookieBanner`).
-- `public/logo.png` — Brand logo (also used as favicon).
+- `public/` — Brand assets and photos:
+  - `logo-full.png` — full horizontal logo (used in footer).
+  - `logo-mark.png` — green sD mark (used in nav and as favicon).
+  - `javer-portrait.jpg` — portrait of Javer (About section, 4:5).
+  - `javer-sfeer.jpg` — atmospheric portrait (Hero card).
 - `design/` — Original design handoff:
   - `design/README.md` — full design spec (tokens, copy, behavior).
   - `design/site.html` — single-file HTML prototype (visual source of truth).
   - `design/screenshots/` — reference screenshots per section.
-  - `design/assets/logo.png` — source logo.
+  - `design/assets/` — brand logos + source photos.
 
 ## Design tokens
 
@@ -41,11 +45,20 @@ Core colors and fonts live in `tailwind.config.ts` and `app/globals.css`:
 
 ## TODO before launch
 
-- [ ] Replace placeholder photography (hero `c1` sfeerfoto + about portret) with real images supplied by client. Add proper `alt` text.
 - [ ] Write a real `/privacy` page (currently a `#` placeholder in footer and cookie banner).
 - [ ] Decide with client whether to add a real contact form (Formspree / Netlify Forms / API route) or keep `mailto:` + `tel:` only.
-- [ ] DNS migration: swap `socialedienstverlener.nl` from Wix to the new host. **Preserve MX/SPF/DKIM** — `info@socialedienstverlener.nl` is in active use.
 - [ ] Optional: privacy-friendly analytics (Plausible/Umami), gated on `localStorage.getItem('sdv_cookie_choice') === 'accept'`.
+
+## Domain migration (Wix → new host)
+
+The current production site lives on **Wix** and the domain `socialedienstverlener.nl` is registered at **Mijndomein**. To go live with this Next.js build:
+
+1. Deploy this repo to a host (Vercel / Netlify / Cloudflare Pages — all free tiers fit).
+2. In **Mijndomein**, update the DNS records for `socialedienstverlener.nl`:
+   - Point `A` / `CNAME` for the apex + `www` to the new host.
+   - **Leave the email DNS records untouched** (`MX`, `SPF`, `DKIM`, `DMARC`) — `info@socialedienstverlener.nl` is in active use and routes via Mijndomein's mail.
+3. Once DNS propagates (usually <1 hour, max 24h), the Wix site stops resolving and the new site takes over.
+4. Cancel the Wix subscription only after the new site is confirmed live.
 
 ## Notes
 
