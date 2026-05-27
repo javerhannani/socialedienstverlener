@@ -16,7 +16,7 @@ export default function Nav() {
   const closeMenu = () => setOpen(false);
 
   return (
-    <nav className="sticky top-0 z-50">
+    <nav className="sticky top-0 z-50 max-820:static">
       <div className="max-w-[1200px] mx-auto px-8 max-720:px-5">
         <div
           className="my-[18px] max-820:my-3 max-w-[1180px] mx-auto flex items-center justify-between gap-[18px] py-[10px] pl-[22px] pr-[14px] border border-line rounded-pill bg-white shadow-[0_8px_24px_-12px_#1a1c1422]"
