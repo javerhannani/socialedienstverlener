@@ -11,7 +11,7 @@ export default function Footer() {
             alt="De Sociale Dienstverlener — Freelancer, voor de jeugd."
             width={3125}
             height={1806}
-            className="h-28 w-auto max-720:h-24"
+            className="h-48 w-auto max-720:h-36"
           />
         </div>
         <SocialLinks size="md" className="justify-center mb-5" />

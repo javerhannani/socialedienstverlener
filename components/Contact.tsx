@@ -69,7 +69,7 @@ export default function Contact() {
               href="mailto:info@socialedienstverlener.nl"
               className="inline-flex items-center gap-[10px] py-4 px-[26px] rounded-pill font-medium text-[0.98rem] bg-ink text-cream hover:bg-olive-deep transition-[transform,background] duration-200 hover:-translate-y-px"
             >
-              Stuur een bericht
+              Neem contact op via mail
               <span className="bg-olive w-6 h-6 rounded-full inline-grid place-items-center text-white text-[0.78rem]">
                 →
               </span>

@@ -74,31 +74,32 @@ export default function Hero() {
 
           {/* Right column: hero stack */}
           <div className="relative h-[560px] max-920:h-[520px] max-520:h-[480px]">
-            {/* c1 dark card */}
+            {/* c1 logo brand card */}
             <div
-              className="absolute top-0 left-0 right-[50px] bottom-[140px] bg-ink text-cream p-[26px] rounded-[28px] flex flex-col gap-[18px] overflow-hidden max-520:right-6 max-520:bottom-[160px] max-520:p-5"
+              className="absolute top-0 left-0 right-[50px] bottom-[140px] bg-white border border-line p-[26px] rounded-[28px] flex flex-col items-center justify-center gap-6 overflow-hidden max-520:right-6 max-520:bottom-[160px] max-520:p-5"
               style={{ boxShadow: "0 22px 50px -22px #1a1c1430" }}
             >
-              <div className="flex justify-between items-start gap-3">
-                <h4
-                  className="m-0 font-display font-medium text-[1.35rem] leading-[1.15]"
-                  style={{ maxWidth: "13ch" }}
-                >
-                  Korte lijnen. Heldere rapportage. Geen wachtlijst.
-                </h4>
-                <div className="bg-olive text-white py-[6px] px-3 rounded-pill text-[0.74rem] font-medium whitespace-nowrap">
-                  13–27 jaar
-                </div>
-              </div>
-              <div className="relative flex-1 rounded-[20px] overflow-hidden">
-                <Image
-                  src="/javer-sfeer.jpg"
-                  alt="Javer Hannani"
-                  fill
-                  sizes="(max-width: 920px) 100vw, 45vw"
-                  className="object-cover"
-                  priority
-                />
+              <div
+                aria-hidden="true"
+                className="absolute rounded-full"
+                style={{
+                  right: "-80px",
+                  top: "-80px",
+                  width: 220,
+                  height: 220,
+                  background: "var(--olive-faint)",
+                }}
+              />
+              <Image
+                src="/logo-full.png"
+                alt="De Sociale Dienstverlener — Freelancer, voor de jeugd."
+                width={3125}
+                height={1806}
+                priority
+                className="relative w-full max-w-[460px] h-auto"
+              />
+              <div className="relative bg-olive text-white py-[6px] px-3 rounded-pill text-[0.74rem] font-medium whitespace-nowrap">
+                13–27 jaar
               </div>
             </div>
 

@@ -45,11 +45,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  icons: {
-    icon: "/logo-mark.png",
-    shortcut: "/logo-mark.png",
-    apple: "/logo-mark.png",
-  },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
