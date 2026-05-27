@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   return (
@@ -13,6 +14,7 @@ export default function Footer() {
             className="h-28 w-auto max-720:h-24"
           />
         </div>
+        <SocialLinks size="md" className="justify-center mb-5" />
         <div className="flex justify-center gap-[22px] flex-wrap">
           <span>© 2026 · Freelancer, voor de jeugd.</span>
           <span>SKJ geregistreerd</span>

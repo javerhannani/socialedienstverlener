@@ -109,6 +109,10 @@ const jsonLd = {
         "Groepswerk",
         "Activiteitenbegeleiding en projecten",
       ],
+      sameAs: [
+        "https://www.linkedin.com/company/de-sociale-dienstverlener/",
+        "https://www.instagram.com/socialedienstverlener/",
+      ],
       founder: { "@id": `${SITE_URL}/#javer` },
       provider: { "@id": `${SITE_URL}/#javer` },
       hasOfferCatalog: {
@@ -189,6 +193,10 @@ const jsonLd = {
         "Groepswerk",
       ],
       url: SITE_URL,
+      sameAs: [
+        "https://www.linkedin.com/company/de-sociale-dienstverlener/",
+        "https://www.instagram.com/socialedienstverlener/",
+      ],
     },
     {
       "@type": "WebSite",

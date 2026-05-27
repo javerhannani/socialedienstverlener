@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import SocialLinks from "./SocialLinks";
 
 const links = [
   { href: "#diensten", label: "Diensten" },
@@ -76,7 +77,8 @@ export default function Nav() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
+            <SocialLinks size="sm" className="max-820:hidden" />
             <a
               href="#contact"
               className="bg-ink text-white py-[11px] px-5 rounded-pill text-[0.86rem] font-medium whitespace-nowrap flex-shrink-0 hover:bg-olive transition-colors"
@@ -123,6 +125,9 @@ export default function Nav() {
                 </li>
               ))}
             </ul>
+            <div className="mt-2 pt-3 px-4 pb-1 border-t border-line">
+              <SocialLinks size="md" />
+            </div>
           </div>
         )}
       </div>
