@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<title>De Sociale Dienstverlener — Javer Hannani</title>
+<meta name="description" content="Freelance jeugdhulpverlening 13–27 jaar in Noord-Holland. Jongerencoaching, casusregie, groeps- en bokscoaching. SKJ geregistreerd." />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --olive: #638500;
+    --olive-deep: #3d5300;
+    --olive-soft: #dbe5b4;
+    --olive-mist: #eff2dc;
+    --olive-faint: #f4f6e6;
+    --cream: #f5efe1;
+    --cream-deep: #ece4d0;
+    --ink: #1a1c14;
+    --ink-2: #4a4d40;
+    --ink-3: #7a7d6f;
+    --line: #1a1c1414;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"DM Sans",ui-sans-serif,system-ui,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .display{font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif; font-weight:500; letter-spacing:-0.025em}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1200px; margin:0 auto; padding:0 32px}
+  @media (max-width:720px){ .wrap{padding:0 20px} }
+
+  /* ---------- NAV ---------- */
+  nav.top{position:sticky; top:0; z-index:50}
+  nav.top .pill{
+    margin:18px auto; max-width:1180px;
+    background:#ffffffcc; backdrop-filter:blur(10px);
+    border:1px solid var(--line);
+    border-radius:999px;
+    display:flex; align-items:center; justify-content:space-between; gap:18px;
+    padding:10px 14px 10px 22px;
+  }
+  nav.top .brand{display:flex; align-items:center; gap:12px; font-weight:600; font-size:.95rem; white-space:nowrap}
+  nav.top .brand .mark{
+    width:36px;height:36px;border-radius:50%;
+    background:var(--ink); color:var(--cream);
+    display:inline-flex; align-items:center; justify-content:center;
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:600; font-size:.86rem; letter-spacing:-0.02em; line-height:1;
+  }
+  nav.top .brand .mark em{color:var(--olive-soft); font-style:normal}
+  nav.top ul{display:flex; gap:22px; list-style:none; margin:0; padding:0; font-size:.9rem; color:var(--ink-2); white-space:nowrap}
+  nav.top ul a:hover{color:var(--olive)}
+  nav.top .cta{background:var(--ink); color:#fff; padding:11px 20px; border-radius:999px; font-size:.86rem; font-weight:500; white-space:nowrap; flex-shrink:0}
+  nav.top .cta:hover{background:var(--olive)}
+  @media (max-width:820px){ nav.top ul{display:none} nav.top .pill{margin:12px} }
+
+  /* ---------- HERO ---------- */
+  .hero{padding:60px 0 40px; position:relative; overflow:hidden}
+  .hero .grid{display:grid; grid-template-columns: 1.15fr .85fr; gap:60px; align-items:center}
+  .hero .eyebrow{
+    display:inline-flex; align-items:center; gap:10px; padding:8px 16px;
+    background:var(--olive-faint); color:var(--olive-deep);
+    border:1px solid #63850020;
+    border-radius:999px; font-size:.82rem; font-weight:500; margin-bottom:28px;
+  }
+  .hero .eyebrow .dot{width:8px;height:8px;background:var(--olive);border-radius:50%; box-shadow:0 0 0 4px #63850018}
+  .hero h1{
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:500;
+    font-size: clamp(48px, 7.6vw, 108px);
+    line-height:.98; letter-spacing:-0.035em; margin:0 0 24px;
+  }
+  .hero h1 .accent{ color:var(--olive); font-style:italic }
+  .hero h1 .underline{
+    background-image: linear-gradient(transparent 68%, var(--olive-soft) 68%, var(--olive-soft) 92%, transparent 92%);
+    background-repeat:no-repeat;
+  }
+  .hero p.lead{font-size:1.2rem; color:var(--ink-2); max-width:50ch; margin:0 0 32px}
+  .hero p.lead strong{color:var(--ink); font-weight:600}
+  .hero .ctaRow{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:16px 26px; border-radius:999px; font-weight:500; font-size:.98rem;
+    transition: transform .15s ease, background .2s;
+  }
+  .btn:hover{ transform: translateY(-1px) }
+  .btn-primary{background:var(--ink); color:var(--cream)}
+  .btn-primary:hover{background:var(--olive-deep)}
+  .btn-primary .arr{background:var(--olive); width:24px; height:24px; border-radius:50%; display:inline-grid; place-items:center; color:#fff; font-size:.78rem}
+  .btn-ghost{border:1px solid #1a1c1430; color:var(--ink); background:transparent}
+  .btn-ghost:hover{border-color:var(--olive); color:var(--olive)}
+  .hero .trust{margin-top:34px; display:flex; gap:18px; align-items:center; flex-wrap:wrap; color:var(--ink-2); font-size:.88rem}
+  .hero .trust .chip{
+    display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid var(--line); padding:8px 14px; border-radius:999px; font-size:.84rem; color:var(--ink);
+  }
+  .hero .trust .chip .d{width:6px; height:6px; background:var(--olive); border-radius:50%}
+
+  /* Hero card stack */
+  .hero .stack{position:relative; height:560px}
+  .hero .stack .card{
+    position:absolute; border-radius:28px; overflow:hidden;
+    box-shadow:0 22px 50px -22px #1a1c1430;
+  }
+  .hero .stack .c1{
+    position:absolute; top:0; left:0; right:50px; bottom:140px; background:var(--ink);
+    padding:26px; color:var(--cream); display:flex; flex-direction:column; gap:18px;
+  }
+  .hero .stack .c1 .top{display:flex; justify-content:space-between; align-items:flex-start; gap:12px}
+  .hero .stack .c1 .top h4{margin:0; font-family:"Bricolage Grotesque",sans-serif; font-weight:500; font-size:1.35rem; max-width:13ch; line-height:1.15}
+  .hero .stack .c1 .top .badge{background:var(--olive); color:#fff; padding:6px 12px; border-radius:999px; font-size:.74rem; font-weight:500; white-space:nowrap}
+  .hero .stack .c1 .ph{
+    flex:1; border-radius:20px;
+    background: repeating-linear-gradient(135deg, #ffffff14 0 14px, #ffffff08 14px 28px);
+    display:grid; place-items:center; font-family:"DM Sans",sans-serif; font-size:.78rem; color:#ffffff60; letter-spacing:.06em; text-align:center; padding:20px;
+  }
+  .hero .stack .c2{
+    position:absolute; right:0; bottom:0; width:62%;
+    background:#fff;
+    padding:18px 20px; display:flex; flex-direction:column; gap:4px;
+    border:1px solid var(--line);
+  }
+  .hero .stack .c2 .lbl{font-size:.7rem; color:var(--ink-2); letter-spacing:.08em; text-transform:uppercase; font-weight:500; margin-bottom:4px}
+  .hero .stack .c2 .row{display:flex; gap:10px; align-items:center; padding:8px 0; font-size:.88rem; min-width:0}
+  .hero .stack .c2 .row + .row{border-top:1px solid var(--line)}
+  .hero .stack .c2 .row .ic{width:28px; height:28px; border-radius:50%; background:var(--olive-faint); display:grid; place-items:center; color:var(--olive-deep); font-weight:600; font-size:.74rem; font-family:"Bricolage Grotesque",sans-serif; flex:none}
+  .hero .stack .c2 .row strong{display:block; font-weight:600; font-size:.92rem; line-height:1.2}
+  .hero .stack .c2 .row .txt{min-width:0; flex:1}
+  .hero .stack .c2 .row small{color:var(--ink-2); font-size:.74rem; display:block; margin-top:1px; line-height:1.3}
+  @media (max-width:920px){ .hero .grid{grid-template-columns:1fr; gap:32px} .hero .stack{height:520px} }
+  @media (max-width:520px){ .hero .stack{height:480px} .hero .stack .c1{right:24px; bottom:160px; padding:20px} .hero .stack .c2{width:78%; padding:14px 16px} }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{padding:100px 0}
+  .sectionHead{display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px; margin-bottom:54px}
+  .sectionHead.left{align-items:flex-start; text-align:left}
+  .sectionHead .pill{background:var(--olive-faint); color:var(--olive-deep); border:1px solid #63850018; padding:6px 14px; border-radius:999px; font-size:.78rem; font-weight:500}
+  .sectionHead h2{font-family:"Bricolage Grotesque",sans-serif; font-weight:500; font-size:clamp(34px, 4.8vw, 60px); letter-spacing:-0.03em; line-height:1.04; margin:0; max-width:20ch}
+  .sectionHead h2 em{font-style:normal; color:var(--olive)}
+  .sectionHead p{margin:0; color:var(--ink-2); max-width:54ch; font-size:1.06rem}
+
+  /* ---------- DIENSTEN ---------- */
+  .services{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
+  .svc{
+    background:#fff; border:1px solid var(--line); border-radius:24px; padding:30px 28px; min-height:240px;
+    display:flex; flex-direction:column;
+    transition: transform .2s, box-shadow .2s, border-color .2s;
+  }
+  .svc:hover{transform:translateY(-2px); box-shadow:0 22px 50px -28px #1a1c1430; border-color:#63850040}
+  .svc .ic{width:54px; height:54px; border-radius:18px; background:var(--olive-faint); color:var(--olive-deep); display:grid; place-items:center; margin-bottom:22px}
+  .svc h3{font-family:"Bricolage Grotesque",sans-serif; font-weight:500; font-size:1.5rem; letter-spacing:-0.02em; margin:0 0 10px}
+  .svc p{margin:0; color:var(--ink-2); font-size:.97rem}
+  .svc .link{margin-top:auto; padding-top:22px; font-size:.86rem; font-weight:500; display:inline-flex; align-items:center; gap:8px; color:var(--olive-deep)}
+
+  /* The boks card — uniek dienst, opvallend (maar nog steeds subtiel olijf) */
+  .svc.feature{
+    background:var(--ink); color:var(--cream); border-color:var(--ink); position:relative; overflow:hidden;
+  }
+  .svc.feature::after{
+    content:""; position:absolute; right:-60px; bottom:-60px; width:200px; height:200px; border-radius:50%;
+    background:radial-gradient(circle, #93c01f40 0%, transparent 70%);
+  }
+  .svc.feature .ic{background:#ffffff14; color:var(--olive-soft)}
+  .svc.feature p{color:#ffffffb8}
+  .svc.feature .link{color:var(--olive-soft)}
+  .svc.feature .tag{
+    position:absolute; top:24px; right:24px; background:var(--olive); color:#fff;
+    padding:6px 12px; border-radius:999px; font-size:.7rem; font-weight:500; letter-spacing:.04em; text-transform:uppercase;
+  }
+
+  /* Andere opdrachten — CTA-tegel */
+  .svc.cta-tile{
+    background:var(--olive-faint); border:1px dashed #63850050;
+    text-align:left;
+  }
+  .svc.cta-tile h3{color:var(--olive-deep)}
+  .svc.cta-tile p{color:var(--olive-deep); opacity:.85}
+  .svc.cta-tile .link{color:var(--olive-deep)}
+
+  @media (max-width:820px){ .services{grid-template-columns:1fr} }
+
+  /* ---------- OVER ---------- */
+  .about{display:grid; grid-template-columns: .9fr 1.1fr; gap:60px; align-items:center; background:#fff; border:1px solid var(--line); border-radius:36px; padding:50px; position:relative; overflow:hidden}
+  .about::before{
+    content:""; position:absolute; right:-100px; top:-100px; width:280px; height:280px; border-radius:50%;
+    background:var(--olive-faint); z-index:0;
+  }
+  .about > *{position:relative; z-index:1}
+  .about .pic{
+    aspect-ratio: 4/5; border-radius:24px; overflow:hidden; position:relative;
+    background:
+      repeating-linear-gradient(135deg, #d8d3c1 0 14px, #cdc7b5 14px 28px);
+    border:1px solid var(--line);
+  }
+  .about .pic .lbl{position:absolute; bottom:14px; left:14px; background:#fff; padding:8px 12px; border-radius:8px; font-size:.74rem; font-weight:500; color:var(--ink-2)}
+  .about h2{font-family:"Bricolage Grotesque",sans-serif; font-weight:500; font-size:clamp(32px,4.5vw,52px); letter-spacing:-0.025em; line-height:1.04; margin:0 0 20px}
+  .about h2 em{font-style:normal; color:var(--olive)}
+  .about p{font-size:1.06rem; color:var(--ink-2); margin:0 0 14px}
+  .about p strong{color:var(--ink); font-weight:600}
+  .about .stats{display:grid; grid-template-columns: repeat(3,1fr); gap:14px; margin-top:28px}
+  .about .stat{background:var(--cream); border-radius:16px; padding:16px}
+  .about .stat .k{font-family:"Bricolage Grotesque",sans-serif; font-weight:500; font-size:1.7rem; color:var(--olive-deep); letter-spacing:-0.03em}
+  .about .stat .v{font-size:.78rem; color:var(--ink-2); margin-top:4px}
+  @media (max-width:920px){ .about{grid-template-columns:1fr; gap:36px; padding:28px; border-radius:28px} }
+
+  /* ---------- WERKWIJZE ---------- */
+  .process{position:relative; display:grid; gap:14px}
+  .step{
+    background:#fff; border:1px solid var(--line); border-radius:22px; padding:24px 28px;
+    display:grid; grid-template-columns:90px 1fr auto; gap:24px; align-items:center;
+  }
+  .step .n{font-family:"Bricolage Grotesque",sans-serif; font-weight:500; font-size:3rem; letter-spacing:-0.03em; color:var(--olive); line-height:1}
+  .step h4{font-family:"Bricolage Grotesque",sans-serif; font-weight:500; font-size:1.3rem; margin:0 0 4px; letter-spacing:-0.015em}
+  .step p{margin:0; color:var(--ink-2); font-size:.96rem}
+  .step .dur{background:var(--olive-faint); color:var(--olive-deep); padding:8px 14px; border-radius:999px; font-size:.78rem; font-weight:500; white-space:nowrap}
+  @media (max-width:720px){ .step{grid-template-columns:60px 1fr; gap:16px} .step .dur{grid-column:1 / -1} .step .n{font-size:2.2rem} }
+
+  /* ---------- VOOR WIE ---------- */
+  .audience{display:grid; grid-template-columns: repeat(3,1fr); gap:18px; margin-top:30px}
+  .aud{background:#fff; border:1px solid var(--line); border-radius:22px; padding:28px; display:flex; flex-direction:column; gap:12px}
+  .aud .tag{font-size:.78rem; color:var(--olive-deep); font-weight:500; text-transform:uppercase; letter-spacing:.05em}
+  .aud h4{font-family:"Bricolage Grotesque",sans-serif; font-weight:500; font-size:1.4rem; margin:0; letter-spacing:-0.02em}
+  .aud ul{margin:0; padding:0; list-style:none; color:var(--ink-2); font-size:.95rem}
+  .aud ul li{padding:8px 0; border-top:1px solid var(--line); display:flex; gap:10px}
+  .aud ul li::before{content:"✓"; color:var(--olive); font-weight:600}
+  @media (max-width:820px){ .audience{grid-template-columns:1fr} }
+
+  /* ---------- CONTACT ---------- */
+  .contactBox{
+    background:#fff; border:1px solid var(--line); border-radius:36px; padding:60px;
+    display:grid; grid-template-columns: 1.1fr 1fr; gap:50px; align-items:center; position:relative; overflow:hidden;
+  }
+  .contactBox::before{
+    content:""; position:absolute; left:-80px; bottom:-120px; width:300px; height:300px; border-radius:50%;
+    background:var(--olive-faint);
+  }
+  .contactBox > *{position:relative; z-index:1}
+  .contactBox h2{font-family:"Bricolage Grotesque",sans-serif; font-weight:500; font-size:clamp(34px,4.6vw,56px); margin:0 0 18px; letter-spacing:-0.03em; line-height:1.02}
+  .contactBox h2 em{font-style:normal; color:var(--olive)}
+  .contactBox p{color:var(--ink-2); margin:0 0 28px; font-size:1.05rem}
+  .contactBox .links{display:grid; gap:12px}
+  .contactBox .links a{
+    display:flex; justify-content:space-between; align-items:center;
+    background:var(--cream); padding:18px 22px; border-radius:16px; font-weight:500;
+    transition: background .15s;
+  }
+  .contactBox .links a:hover{background:var(--olive-faint)}
+  .contactBox .links a small{font-size:.76rem; color:var(--ink-2); display:block; margin-bottom:2px; font-weight:400}
+  .contactBox .links a .ic{width:36px; height:36px; border-radius:50%; background:var(--olive); color:#fff; display:grid; place-items:center}
+  @media (max-width:920px){ .contactBox{grid-template-columns:1fr; padding:32px; border-radius:28px; gap:30px} }
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:50px 0 90px; text-align:center; color:var(--ink-2); font-size:.86rem}
+  footer .logo{display:inline-flex; align-items:center; gap:10px; font-weight:600; color:var(--ink); margin-bottom:14px}
+  footer .logo .mark{width:30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream); display:inline-flex; align-items:center; justify-content:center; font-family:"Bricolage Grotesque",sans-serif; font-weight:600; font-size:.78rem; line-height:1}
+  footer .logo .mark em{color:var(--olive-soft); font-style:normal}
+  footer .row{display:flex; justify-content:center; gap:22px; flex-wrap:wrap}
+
+  /* ---------- COOKIE BANNER ---------- */
+  .cookie{
+    position:fixed; bottom:18px; left:18px; right:18px; z-index:60;
+    max-width:520px; margin-left:auto; margin-right:auto;
+    background:#fff; border:1px solid var(--line); border-radius:20px;
+    box-shadow:0 22px 50px -22px #1a1c1440;
+    padding:22px 24px;
+    display:flex; flex-direction:column; gap:14px;
+    transform: translateY(0); transition: transform .3s, opacity .3s; opacity:1;
+  }
+  .cookie.hidden{transform: translateY(140%); opacity:0; pointer-events:none}
+  .cookie h5{margin:0; font-family:"Bricolage Grotesque",sans-serif; font-weight:500; font-size:1.05rem; letter-spacing:-0.01em; display:flex; align-items:center; gap:10px}
+  .cookie h5 .d{width:8px; height:8px; background:var(--olive); border-radius:50%}
+  .cookie p{margin:0; color:var(--ink-2); font-size:.9rem; line-height:1.5}
+  .cookie p a{color:var(--olive-deep); text-decoration:underline}
+  .cookie .row{display:flex; gap:10px; flex-wrap:wrap}
+  .cookie .row button{
+    flex:1; min-width:120px; border:0; cursor:pointer; padding:12px 18px; border-radius:999px; font-weight:500;
+    font-family:inherit; font-size:.9rem;
+  }
+  .cookie .row .accept{background:var(--ink); color:#fff}
+  .cookie .row .accept:hover{background:var(--olive-deep)}
+  .cookie .row .decline{background:transparent; color:var(--ink); border:1px solid var(--line)}
+  .cookie .row .decline:hover{border-color:var(--olive); color:var(--olive-deep)}
+  /* ---------- DENSITY MODIFIERS ---------- */
+  body[data-density="compact"] section{padding:64px 0}
+  body[data-density="compact"] .hero{padding:36px 0 24px}
+  body[data-density="compact"] .contactBox{padding:36px}
+  body[data-density="compact"] .about{padding:32px}
+  body[data-density="spacious"] section{padding:140px 0}
+  body[data-density="spacious"] .hero{padding:90px 0 60px}
+  body[data-density="spacious"] .contactBox{padding:80px}
+  body[data-density="spacious"] .about{padding:64px}
+
+  /* ---------- ACCENT MODIFIERS ---------- */
+  body[data-accent="subtle"]{
+    --olive-faint: #f6f6f1;
+    --olive-mist: #f1f3e6;
+  }
+  body[data-accent="subtle"] .hero h1 .underline{
+    background-image: linear-gradient(transparent 78%, #1a1c1418 78%, #1a1c1418 92%, transparent 92%);
+  }
+  body[data-accent="subtle"] .hero h1 .accent{color:var(--ink)}
+  body[data-accent="subtle"] .svc.feature{background:#1f2118}
+  body[data-accent="bold"]{
+    --olive-faint: #e3ecbb;
+    --olive-mist: #d6e29c;
+  }
+  body[data-accent="bold"] .svc.feature{background:var(--olive)}
+  body[data-accent="bold"] .svc.feature .ic{background:#ffffff20; color:#fff}
+  body[data-accent="bold"] .svc.feature p{color:#ffffffd0}
+  body[data-accent="bold"] .svc.feature .link{color:#fff}
+  body[data-accent="bold"] .svc.feature .tag{background:var(--ink); color:var(--olive)}
+  body[data-accent="bold"] .btn-primary{background:var(--olive)}
+  body[data-accent="bold"] .btn-primary .arr{background:var(--ink)}
+  body[data-accent="bold"] nav.top .cta{background:var(--olive)}
+  body[data-accent="bold"] nav.top .cta:hover{background:var(--olive-deep)}
+
+  /* ---------- TWEAKS PANEL ---------- */
+  .tweaks{
+    position:fixed; bottom:18px; right:18px; z-index:80;
+    width:320px; max-width:calc(100vw - 36px);
+    background:#fff; border:1px solid var(--line); border-radius:18px;
+    box-shadow:0 30px 60px -25px #1a1c1450;
+    font-family:"DM Sans",sans-serif; color:var(--ink);
+    transform:translateY(140%); opacity:0; transition:transform .25s, opacity .25s; pointer-events:none;
+    overflow:hidden;
+  }
+  .tweaks.open{transform:translateY(0); opacity:1; pointer-events:auto}
+  .tweaks .tw-head{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 16px 12px; border-bottom:1px solid var(--line);
+  }
+  .tweaks .tw-head h6{margin:0; font-family:"Bricolage Grotesque",sans-serif; font-weight:500; font-size:1rem; letter-spacing:-0.01em; display:flex; align-items:center; gap:8px}
+  .tweaks .tw-head h6 .d{width:8px; height:8px; background:var(--olive); border-radius:50%}
+  .tweaks .tw-close{background:transparent; border:0; cursor:pointer; width:30px; height:30px; border-radius:50%; display:grid; place-items:center; color:var(--ink-2); font-size:1.2rem; line-height:1}
+  .tweaks .tw-close:hover{background:var(--cream)}
+  .tweaks .tw-body{padding:16px; max-height:65vh; overflow:auto}
+  .tweaks .tw-section{margin-bottom:18px}
+  .tweaks .tw-section:last-child{margin-bottom:0}
+  .tweaks .tw-label{font-size:.74rem; font-weight:500; color:var(--ink-2); text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px}
+  .tweaks .tw-seg{
+    display:grid; grid-auto-flow:column; grid-auto-columns:1fr;
+    background:var(--cream); border-radius:10px; padding:3px; gap:3px;
+  }
+  .tweaks .tw-seg button{
+    border:0; background:transparent; cursor:pointer;
+    padding:8px 6px; border-radius:8px; font-size:.82rem; color:var(--ink-2); font-family:inherit; font-weight:500;
+    transition:.15s;
+  }
+  .tweaks .tw-seg button[aria-pressed="true"]{background:#fff; color:var(--ink); box-shadow:0 2px 6px -3px #1a1c1430}
+  .tweaks .tw-options{display:grid; gap:6px}
+  .tweaks .tw-opt{
+    display:flex; gap:10px; align-items:flex-start;
+    border:1px solid var(--line); padding:10px 12px; border-radius:10px; cursor:pointer;
+    transition:.15s; background:#fff;
+  }
+  .tweaks .tw-opt:hover{border-color:#63850050; background:var(--cream)}
+  .tweaks .tw-opt[aria-pressed="true"]{border-color:var(--olive); background:var(--olive-faint)}
+  .tweaks .tw-opt .ix{font-family:"DM Sans",sans-serif; font-variant-numeric:tabular-nums; font-size:.74rem; color:var(--olive-deep); font-weight:600; min-width:18px; padding-top:1px}
+  .tweaks .tw-opt .tx{font-size:.86rem; line-height:1.35; color:var(--ink)}
+  .tweaks .tw-foot{padding:10px 16px; border-top:1px solid var(--line); font-size:.72rem; color:var(--ink-2); text-align:center}
+  @media (max-width:480px){ .tweaks{bottom:10px; right:10px; width:calc(100vw - 20px)} }
+
+</style>
+</head>
+<body data-screen-label="Site — De Sociale Dienstverlener">
+
+<nav class="top">
+  <div class="wrap">
+    <div class="pill">
+      <a class="brand" href="#"><span class="mark">s<em>D</em></span><span>De Sociale Dienstverlener</span></a>
+      <ul>
+        <li><a href="#diensten">Diensten</a></li>
+        <li><a href="#over">Over Javer</a></li>
+        <li><a href="#werkwijze">Samenwerking</a></li>
+        <li><a href="#opdrachtgevers">Opdrachtgevers</a></li>
+      </ul>
+      <a class="cta" href="#contact">Bespreek opdracht</a>
+    </div>
+  </div>
+</nav>
+
+<!-- =================== HERO =================== -->
+<header class="hero">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Freelance jeugdhulpverlener · Flexibel inzetbaar</div>
+        <h1 id="heroH1"></h1>
+        <p class="lead"><strong>De Sociale Dienstverlener</strong> is de freelance praktijk van Javer Hannani — jeugdhulpverlener met tien jaar ervaring (13–27 jaar). Direct inzetbaar voor gemeentes, wijkteams, zorgaanbieders en scholen in Noord-Holland.</p>
+        <div class="ctaRow">
+          <a class="btn btn-primary" href="#contact">Bespreek een opdracht <span class="arr">→</span></a>
+          <a class="btn btn-ghost" href="#diensten">Bekijk inzet­mogelijkheden</a>
+        </div>
+        <div class="trust">
+          <span class="chip"><span class="d"></span>SKJ geregistreerd</span>
+          <span class="chip"><span class="d"></span>10 jaar ervaring</span>
+          <span class="chip"><span class="d"></span>Regio Noord-Holland</span>
+        </div>
+      </div>
+
+      <div class="stack" aria-hidden="true">
+        <div class="card c1">
+          <div class="top">
+            <h4>Korte lijnen. Heldere rapportage. Geen wachtlijst.</h4>
+            <div class="badge">13–27 jaar</div>
+          </div>
+          <div class="ph">PLAATSHOUDER — sfeerfoto (gesprek, wandeling of bokszaal)</div>
+        </div>
+        <div class="card c2">
+          <div class="lbl">Inzetbaar voor</div>
+          <div class="row"><span class="ic">G</span><div class="txt"><strong>Gemeentes &amp; wijkteams</strong><small>Casusregie en jeugdhulp op afroep</small></div></div>
+          <div class="row"><span class="ic">Z</span><div class="txt"><strong>Zorgaanbieders</strong><small>Detachering &amp; onderaanneming</small></div></div>
+          <div class="row"><span class="ic">S</span><div class="txt"><strong>Scholen &amp; projecten</strong><small>Groepswerk en begeleiding</small></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- =================== DIENSTEN =================== -->
+<section id="diensten">
+  <div class="wrap">
+    <div class="sectionHead">
+      <div class="pill">Diensten</div>
+      <h2>Vijf manieren waarop ik kan worden ingezet.</h2>
+      <p>Van losse casusregie tot meerjarige projecten. Flexibel inzetbaar via ZIN, PGB, detachering of onderaannemerschap — in afstemming met u als opdrachtgever.</p>
+    </div>
+
+    <div class="services">
+      <!-- 01 -->
+      <div class="svc">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <h3>Jongerencoaching</h3>
+        <p>Eén-op-één begeleiding van jongeren (13–27) die vastlopen op school, thuis, op het werk of in zichzelf. Op locatie, op straat of wandelend buiten — wat past bij deze jongere.</p>
+      </div>
+
+      <!-- 02 -->
+      <div class="svc">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 12h18M3 17h12"/><circle cx="19" cy="17" r="2.2"/></svg>
+        </div>
+        <h3>Casusregie</h3>
+        <p>Overzicht houden in complexe trajecten. Ik coördineer tussen gezin, hulpverleners, school en gemeente, en lever heldere terugkoppeling aan u als opdrachtgever.</p>
+      </div>
+
+      <!-- 03 — feature: Bokscoaching -->
+      <div class="svc feature">
+        <span class="tag">Uniek</span>
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h-3a3 3 0 0 0-3 3v3l-2 1v6a3 3 0 0 0 3 3h5a3 3 0 0 0 3-3v-3"/><path d="M14 4l4 2v5a2 2 0 0 1-2 2h-2"/></svg>
+        </div>
+        <h3>Bokscoaching</h3>
+        <p>Bokstraining als interventie. Werken aan emotie­regulatie, zelfbeheersing en lichaams­bewustzijn — vaak passend voor jongeren die meer baat hebben bij bewegen dan praten.</p>
+      </div>
+
+      <!-- 04 -->
+      <div class="svc">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5"/><path d="M11 20c0-3 2.5-5 5-5s5 2 5 5"/></svg>
+        </div>
+        <h3>Groepswerk</h3>
+        <p>Themasessies en trainingen voor groepen jongeren. Op maat — weerbaarheid, communicatie of samenwerking. Voor scholen, jongerenwerk of wijkteams.</p>
+      </div>
+
+      <!-- 05 -->
+      <div class="svc">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V8l7-4 7 4v13"/><path d="M9 21v-7h6v7"/></svg>
+        </div>
+        <h3>Activiteiten­begeleiding &amp; projecten</h3>
+        <p>Inzet bij jongerenprojecten — als uitvoerder of als mede-ontwerper. Van losse activiteiten tot meerjarige programma's, klein of groot.</p>
+      </div>
+
+      <!-- 06 — Andere opdrachten CTA -->
+      <a class="svc cta-tile" href="#contact">
+        <div class="ic" style="background:#63850020">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <h3>Andere opdracht?</h3>
+        <p>Iets specifieks voor uw gemeente, organisatie of school? Vertel kort wat u nodig heeft — vaak is er ruimte om samen iets passends te maken.</p>
+        <span class="link">Neem contact op →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== OVER MIJ =================== -->
+<section id="over">
+  <div class="wrap">
+    <div class="about">
+      <div class="pic"><div class="lbl">PORTRET — vervang met eigen foto</div></div>
+      <div>
+        <div class="pill" style="background:var(--olive-faint); color:var(--olive-deep); border:1px solid #63850018; display:inline-block; padding:6px 14px; border-radius:999px; font-size:.78rem; font-weight:500; margin-bottom:18px">Over mij</div>
+        <h2>Even voorstellen — <em>Javer Hannani.</em></h2>
+        <p>Vanaf mijn zestiende werk ik met jongeren — eerst als vrijwilliger en activiteiten­begeleider, later als hulpverlener en regisseur. Inmiddels tien jaar ervaring in <strong>verschillende zwaartes</strong>: van lichte coaching tot complexe casusregie.</p>
+        <p style="font-weight: 400">Ik studeerde af aan de HBO Social Work met een excellentie­programma en ben SKJ-geregistreerd. Praktisch en oplossings­gericht, met oog voor het verhaal eronder — en met de overtuiging dat jongeren rust, vertrouwen en tijd verdienen. Voor opdrachtgevers betekent dat: korte lijnen, heldere afspraken en bereikbaarheid wanneer het nodig is.</p>
+        <div class="stats">
+          <div class="stat"><div class="k">10 jr</div><div class="v">ervaring in de jeugdhulp</div></div>
+          <div class="stat"><div class="k">SKJ</div><div class="v">geregistreerd</div></div>
+          <div class="stat"><div class="k">HBO+</div><div class="v">Social Work met excellentie</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SAMENWERKING =================== -->
+<section id="werkwijze">
+  <div class="wrap">
+    <div class="sectionHead">
+      <div class="pill">Samenwerking</div>
+      <h2>Hoe een opdracht meestal verloopt.</h2>
+      <p>Van eerste aanvraag tot afsluitende rapportage — in vier overzichtelijke stappen.</p>
+    </div>
+    <div class="process">
+      <div class="step"><div class="n">01</div><div><h4>Aanvraag</h4><p>U mailt of belt met een casus, een lopend project of een specifieke vraag. Ik reageer binnen één werkdag met een eerste reactie.</p></div><div class="dur">≤ 1 werkdag</div></div>
+      <div class="step"><div class="n">02</div><div><h4>Kennismaking &amp; match</h4><p>Korte verkenning of het past — bij u op locatie, bij mij of digitaal. We bespreken inhoud, beschikbaarheid en tarief.</p></div><div class="dur">~ 1 uur · vrijblijvend</div></div>
+      <div class="step"><div class="n">03</div><div><h4>Inzet</h4><p>Uitvoering met korte lijn naar u als opdrachtgever en het netwerk rond de jongere. Tussentijds bereikbaar, geen onnodige administratie.</p></div><div class="dur">Op maat</div></div>
+      <div class="step"><div class="n">04</div><div><h4>Rapportage &amp; afronding</h4><p>Heldere tussentijdse terugkoppeling en een afsluitend gesprek. Met, indien gewenst, een schriftelijk eindverslag.</p></div><div class="dur">Op vaste momenten</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== OPDRACHTGEVERS =================== -->
+<section id="opdrachtgevers">
+  <div class="wrap">
+    <div class="sectionHead">
+      <div class="pill">Opdrachtgevers</div>
+      <h2>Voor wie ik werk.</h2>
+      <p>Drie type partijen die mij inzetten — elk met een eigen vraagstuk en tempo.</p>
+    </div>
+    <div class="audience">
+      <div class="aud">
+        <div class="tag">Gemeentes &amp; wijkteams</div>
+        <h4>Wanneer een casus om extra handen vraagt.</h4>
+        <ul>
+          <li>Casusregie op lopende trajecten</li>
+          <li>Jeugdhulp via ZIN of PGB</li>
+          <li>Overbruggings­zorg bij wachttijd</li>
+          <li>Korte, heldere terugkoppeling</li>
+        </ul>
+      </div>
+      <div class="aud">
+        <div class="tag">Zorgaanbieders</div>
+        <h4>Wanneer uw caseload of expertise tekortschiet.</h4>
+        <ul>
+          <li>Detachering of onderaannemerschap</li>
+          <li>Complexe casuïstiek erbij pakken</li>
+          <li>Bokscoaching als interventie</li>
+          <li>Tijdelijke vervanging of uitbreiding</li>
+        </ul>
+      </div>
+      <div class="aud">
+        <div class="tag">Scholen &amp; projecten</div>
+        <h4>Wanneer er meer nodig is dan de mentor kan bieden.</h4>
+        <ul>
+          <li>Groepswerk &amp; weerbaarheids­trainingen</li>
+          <li>Individuele begeleiding op school</li>
+          <li>Inzet bij jongeren­projecten</li>
+          <li>Meedenken aan programma‐ontwerp</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CONTACT =================== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contactBox">
+      <div>
+        <div class="pill" style="background:var(--olive-faint); color:var(--olive-deep); border:1px solid #63850018; display:inline-block; padding:6px 14px; border-radius:999px; font-size:.78rem; font-weight:500; margin-bottom:18px">Contact</div>
+        <h2>Bespreek vrijblijvend <em>een opdracht.</em></h2>
+        <p>Een casus, een lopend project of een specifieke vraag? Stuur een bericht of bel direct. Ik reageer binnen één werkdag — en als het niet past, denk ik graag mee over een passend alternatief.</p>
+        <a class="btn btn-primary" href="mailto:info@socialedienstverlener.nl">Stuur een bericht <span class="arr">→</span></a>
+      </div>
+      <div class="links">
+        <a href="tel:+31633668370">
+          <div><small>Bellen of appen</small>06 — 33 66 83 70</div>
+          <span class="ic">→</span>
+        </a>
+        <a href="mailto:info@socialedienstverlener.nl">
+          <div><small>E-mail</small>info@socialedienstverlener.nl</div>
+          <span class="ic">→</span>
+        </a>
+        <a href="https://wa.me/31633668370" target="_blank" rel="noopener">
+          <div><small>WhatsApp</small>Direct bericht via WhatsApp</div>
+          <span class="ic">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="wrap">
+    <div class="logo"><span class="mark">s<em>D</em></span><span>De Sociale Dienstverlener</span></div>
+    <div class="row">
+      <span>© 2026 · Freelancer, voor de jeugd.</span>
+      <span>SKJ geregistreerd</span>
+      <span>Regio Noord-Holland</span>
+      <span><a href="#" style="color:inherit">Privacy</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- =================== COOKIE BANNER =================== -->
+<div class="cookie" id="cookieBanner" role="dialog" aria-label="Cookievoorkeuren">
+  <h5><span class="d"></span> Cookies &amp; privacy</h5>
+  <p>Deze website gebruikt alleen functionele cookies om te zorgen dat alles werkt. Geen tracking, geen advertenties. Lees meer in het <a href="#">privacystatement</a>.</p>
+  <div class="row">
+    <button class="decline" id="cookieDecline">Alleen noodzakelijk</button>
+    <button class="accept" id="cookieAccept">Akkoord</button>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var banner = document.getElementById('cookieBanner');
+    var KEY = 'sdv_cookie_choice';
+    try {
+      if (localStorage.getItem(KEY)) {
+        banner.classList.add('hidden');
+      }
+    } catch(e){}
+    function hide(choice){
+      try { localStorage.setItem(KEY, choice); } catch(e){}
+      banner.classList.add('hidden');
+    }
+    document.getElementById('cookieAccept').addEventListener('click', function(){ hide('accept'); });
+    document.getElementById('cookieDecline').addEventListener('click', function(){ hide('decline'); });
+  })();
+</script>
+
+<!-- =================== TWEAKS PANEL =================== -->
+<aside class="tweaks" id="tweaksPanel" aria-hidden="true">
+  <div class="tw-head">
+    <h6><span class="d"></span> Tweaks</h6>
+    <button class="tw-close" id="tweaksClose" aria-label="Sluit tweaks">×</button>
+  </div>
+  <div class="tw-body">
+
+    <div class="tw-section">
+      <div class="tw-label">Hoofdkop</div>
+      <div class="tw-options" id="tw-headline"></div>
+    </div>
+
+    <div class="tw-section">
+      <div class="tw-label">Accent (olijfgroen)</div>
+      <div class="tw-seg" id="tw-accent">
+        <button data-value="subtle">Subtiel</button>
+        <button data-value="standard">Standaard</button>
+        <button data-value="bold">Sterk</button>
+      </div>
+    </div>
+
+    <div class="tw-section">
+      <div class="tw-label">Density</div>
+      <div class="tw-seg" id="tw-density">
+        <button data-value="compact">Compact</button>
+        <button data-value="standard">Standaard</button>
+        <button data-value="spacious">Ruim</button>
+      </div>
+    </div>
+
+  </div>
+  <div class="tw-foot">Wijzigingen zijn live — worden bewaard tot het volgende bezoek.</div>
+</aside>
+
+<script>
+  (function(){
+    // ---- DEFAULTS (parent rewrites the JSON between markers on tweak save) ----
+    var TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+      "headline": 5,
+      "accent": "standard",
+      "density": "compact"
+    }/*EDITMODE-END*/;
+
+    // ---- HEADLINE OPTIONS ----
+    // Each option is HTML; .underline and .accent are existing styled spans.
+    var HEADLINES = {
+      1: 'Jeugdhulp <span class="underline">op maat</span> — daar waar het reguliere aanbod <span class="accent">tekortschiet.</span>',
+      2: 'Inzetbare jeugdhulp voor <span class="underline">casuïstiek</span> die om <span class="accent">méér vraagt.</span>',
+      3: 'Tien jaar in de jeugdhulp. <span class="underline">Eén paar handen,</span> <span class="accent">direct inzetbaar.</span>',
+      4: 'Een <span class="underline">vaste schakel</span> in een <span class="accent">complex jeugd-landschap.</span>',
+      5: 'Freelance jeugdhulp die <span class="underline">naast de jongere</span> staat — en <span class="accent">naast u.</span>'
+    };
+    var HEADLINE_LABELS = {
+      1: 'Jeugdhulp op maat — daar waar het reguliere aanbod tekortschiet.',
+      2: 'Inzetbare jeugdhulp voor casuïstiek die om méér vraagt.',
+      3: 'Tien jaar in de jeugdhulp. Eén paar handen, direct inzetbaar.',
+      4: 'Een vaste schakel in een complex jeugd-landschap.',
+      5: 'Freelance jeugdhulp die naast de jongere staat — en naast u.'
+    };
+
+    // ---- STATE ----
+    var state = Object.assign({}, TWEAK_DEFAULTS);
+
+    function applyAll(){
+      // Headline
+      var h1 = document.getElementById('heroH1');
+      if (h1) h1.innerHTML = HEADLINES[state.headline] || HEADLINES[1];
+      // Accent + density
+      document.body.setAttribute('data-accent', state.accent);
+      document.body.setAttribute('data-density', state.density);
+      // Sync UI
+      syncSeg('tw-accent', state.accent);
+      syncSeg('tw-density', state.density);
+      syncHeadlineUI();
+    }
+
+    function syncSeg(id, value){
+      var seg = document.getElementById(id);
+      if (!seg) return;
+      var btns = seg.querySelectorAll('button');
+      for (var i=0; i<btns.length; i++){
+        btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-value') === String(value) ? 'true' : 'false');
+      }
+    }
+
+    function syncHeadlineUI(){
+      var opts = document.querySelectorAll('#tw-headline .tw-opt');
+      for (var i=0; i<opts.length; i++){
+        opts[i].setAttribute('aria-pressed', opts[i].getAttribute('data-value') === String(state.headline) ? 'true' : 'false');
+      }
+    }
+
+    function persist(key, value){
+      try {
+        window.parent.postMessage({type: '__edit_mode_set_keys', edits: (function(){ var o={}; o[key]=value; return o; })()}, '*');
+      } catch(e){}
+    }
+
+    // ---- BUILD HEADLINE OPTIONS UI ----
+    var hWrap = document.getElementById('tw-headline');
+    Object.keys(HEADLINES).forEach(function(k){
+      var btn = document.createElement('button');
+      btn.className = 'tw-opt';
+      btn.setAttribute('type', 'button');
+      btn.setAttribute('data-value', k);
+      btn.innerHTML = '<span class="ix">'+ String(k).padStart(2,'0') +'</span><span class="tx">'+ HEADLINE_LABELS[k] +'</span>';
+      btn.addEventListener('click', function(){
+        state.headline = parseInt(k, 10);
+        applyAll();
+        persist('headline', state.headline);
+      });
+      hWrap.appendChild(btn);
+    });
+
+    // ---- SEGMENTED CONTROLS ----
+    function wireSeg(id, key){
+      var seg = document.getElementById(id);
+      if (!seg) return;
+      seg.addEventListener('click', function(e){
+        var btn = e.target.closest('button[data-value]');
+        if (!btn) return;
+        var v = btn.getAttribute('data-value');
+        state[key] = v;
+        applyAll();
+        persist(key, v);
+      });
+    }
+    wireSeg('tw-accent', 'accent');
+    wireSeg('tw-density', 'density');
+
+    // ---- TWEAKS HOST PROTOCOL ----
+    var panel = document.getElementById('tweaksPanel');
+    var closeBtn = document.getElementById('tweaksClose');
+
+    function open(){ panel.classList.add('open'); panel.setAttribute('aria-hidden', 'false'); }
+    function close(){ panel.classList.remove('open'); panel.setAttribute('aria-hidden', 'true'); try { window.parent.postMessage({type: '__edit_mode_dismissed'}, '*'); } catch(e){} }
+
+    // Register listener FIRST, then announce availability.
+    window.addEventListener('message', function(e){
+      var d = e.data || {};
+      if (d.type === '__activate_edit_mode') open();
+      else if (d.type === '__deactivate_edit_mode') close();
+    });
+    closeBtn.addEventListener('click', close);
+
+    // Apply initial state from defaults
+    applyAll();
+
+    // Tell parent we have tweaks available
+    try { window.parent.postMessage({type: '__edit_mode_available'}, '*'); } catch(e){}
+  })();
+</script>
+
+</body>
+</html>
