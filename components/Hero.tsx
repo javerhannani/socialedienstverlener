@@ -35,8 +35,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-[1.2rem] text-ink-2 max-w-[50ch] m-0 mb-8">
-              <strong className="text-ink font-semibold">De Sociale Dienstverlener</strong> is de freelance praktijk van
-              Javer Hannani — jeugdhulpverlener met tien jaar ervaring (13–27 jaar). Direct inzetbaar voor gemeentes,
+              Achter <strong className="text-ink font-semibold">De Sociale Dienstverlener</strong> staat Javer Hannani — freelance jeugdhulpverlener met tien jaar ervaring (13–27 jaar). Direct inzetbaar voor gemeentes,
               wijkteams, zorgaanbieders en scholen in Noord-Holland.
             </p>
 
